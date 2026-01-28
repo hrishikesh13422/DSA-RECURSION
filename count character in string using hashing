@@ -1,0 +1,19 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    string s;
+    cin>>s;
+    
+    //pre compute
+    int hash[26]={0};
+    for(int i=0;i<s.size();i++){
+        hash[s[i]-'a']++;
+    }
+    
+    //Query statements
+    char alp;
+    cout<<"enter the alphabet to check frequency";
+    cin>>alp;
+    cout<<hash[alp-'a']<<endl;
+    return 0;
+}
