@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+using namespace std;
+int second_largest(vector<int>&arr,int n){
+    int largest=arr[0],second=-1;
+    for(int i=0;i<n;i++){
+        if(arr[i]>largest){
+            second=largest;
+            largest=arr[i];
+        }
+        if(arr[i]>second && arr[i]!=largest){
+            second=arr[i];
+        }
+    }
+    return second;
+    
+}
+int main(){
+    vector<int>arr;
+    int n;
+    cin>>n;
+    for(int i=0;i<n;i++){
+        int temp;
+        cin>>temp;
+        arr.push_back(temp);
+    }
+    int second=second_largest(arr,n);
+    cout<<second;
+    return 0;
+}
