@@ -1,5 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
+
 int second_smallest(vector<int>arr,int n){
     int smallest=arr[0];
     int second_small=INT_MAX;
